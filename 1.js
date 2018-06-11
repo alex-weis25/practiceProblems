@@ -1,6 +1,8 @@
 /*
 Question 1: sortByStrings
-  Sort the letters in the string s by the order they occur in the string t. You can assume t will not have repetitive characters. For s = "weather" and t = "therapyw", the output should be sortByString(s, t) = "theeraw". For s = "good" and t = "odg", the output should be sortByString(s, t) = "oodg".
+  Sort the letters in the string s by the order they occur in the string t. You can assume t will not have repetitive characters.
+  For s = "weather" and t = "therapyw", the output should be sortByString(s, t) = "theeraw". For s = "good" and t = "odg",
+  the output should be sortByString(s, t) = "oodg".
 */
 
 // Helper function used to keep track of unique letter occurences
@@ -31,12 +33,15 @@ const buildStr = (number, string) => {
 
 /* sortByStrings
   This function creates a hash map with key-value pairs corresponding
-  to each unique character in string s and the corresponding occurences of each letter. It then loops through each character in string t, checking to see if the current letter was also in s. If so, the function takes the key value pair from the hashmap and passes it to buildStr to concatenate the returned value to the final string.
+  to each unique character in string s and the corresponding occurences of each letter.
+  It then loops through each character in string t, checking to see if the current letter was also in s. If so,
+  the function takes the key value pair from the hashmap and passes it to buildStr to concatenate the returned value
+  to the final string.
 */
 
 const sortByStrings = (s, t) => {
   const stringHash = createHash(s);
-  let lettersSearched = {}; // Just in case there's repitition :)
+  let lettersSearched = {}; // Just in case there's repetition :)
   let returnValue = '';
 
   for (let i = 0; i < t.length; i++){
