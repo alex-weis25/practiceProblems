@@ -61,7 +61,6 @@ const decodeStrings = (inputStr, strIdx = 0, startStr = '', occurences = 0) => {
     let current = inputStr[strIdx];
     if (inputStr[strIdx] === ']'){
       let endStr = buildStr(occurences, decoded);
-      strIdx++;
       return endStr;
     } else if (numbersArr.indexOf(+current) > -1){
       newOccurences += current;
